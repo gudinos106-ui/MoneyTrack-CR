@@ -1,0 +1,8 @@
+streamlit
+pandas
+fpdf2
+pdfplumber
+plotly
+python-dotenv
+pydantic
+pyTelegramBotAPI
