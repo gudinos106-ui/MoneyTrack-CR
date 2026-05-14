@@ -19,7 +19,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 def configurar_pwa():
-    manifest_url = "https://raw.githubusercontent.com/gudinos106-ui/MoneyTrack-CR/refs/heads/main/manifest.json"
+    manifest_url = "https://raw.githubusercontent.com/gudinos106-ui/MoneyTrack-CR/refs/heads/main/manifest.json?v=2"
     sw_url = "https://raw.githubusercontent.com/gudinos106-ui/MoneyTrack-CR/refs/heads/main/sw.js"
     
     pwa_html = f"""
