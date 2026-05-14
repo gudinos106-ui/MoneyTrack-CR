@@ -186,10 +186,10 @@ def generar_pdf_reclamo(df_dups):
     
 # --- 1. CONFIGURACIÓN INICIAL ---
 load_dotenv(dotenv_path=".env.py")
-st.set_page_config(page_title="BCR MoneyTracker Gold", page_icon="💰", layout="wide")
+st.set_page_config(page_title="MoneyTracker Gold", page_icon="💰", layout="wide")
 
 # Validación de datos con Pydantic
-class MovimientoBCR(BaseModel):
+class MovimientoFinanciero(BaseModel):
     concepto: str
     monto: float = Field(gt=0, description="El monto debe ser mayor a cero")
 
@@ -329,7 +329,7 @@ if archivo:
                         st.dataframe(df_dups, width='stretch')
 
                         if 'alerta_duplicados_enviada' not in st.session_state:
-                            mensaje_bot = f"🚨 *Alerta BCR ({nombre_usuario})*\n\nDuplicados detectados."
+                            mensaje_bot = f"🚨 *Alerta Banco ({nombre_usuario})*\n\nDuplicados detectados."
                             if utils.enviar_telegram(mensaje_bot):
                                 st.toast("Alerta enviada 📲")
                                 st.session_state['alerta_duplicados_enviada'] = True
@@ -368,7 +368,7 @@ if archivo:
                                     st.download_button(
                                         label="Descargar Informe Gold",
                                         data=pdf_gold_bytes,
-                                        file_name=f"Informe_BCR_{nombre_usuario}.pdf",
+                                        file_name=f"Informe_Financiero_{nombre_usuario}.pdf",
                                         mime="application/pdf"
                                     )
                                     # 2. Generamos el Reporte de Reclamo (Solo si hay duplicados)
@@ -377,7 +377,7 @@ if archivo:
                                         st.download_button(
                                             label="⚠️ Descargar Boleta de Reclamo",
                                             data=pdf_reclamo_bytes,
-                                            file_name=f"Reclamo_BCR_{nombre_usuario}.pdf",
+                                            file_name=f"Reclamo_Banco_{nombre_usuario}.pdf",
                                             mime="application/pdf"
                                         )
                                         st.warning("Se detectaron posibles duplicados. Descargue la boleta de reclamo.")
