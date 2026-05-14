@@ -4,7 +4,7 @@
   "description": "Analizador financiero inteligente para micro-entrepreneurs.",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "https://raw.githubusercontent.com/gudinos106-ui/MoneyTrack-CR/refs/heads/main/logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
