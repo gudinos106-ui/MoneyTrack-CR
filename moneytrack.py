@@ -15,8 +15,8 @@ from utils import enviar_telegram, limpiar_monto, categorizar
 
 st.set_page_config(
     page_title="MoneyTrack Gold",
-    layout="wide", 
-    initial_sidebar_state="expanded"
+    page_icon="https://raw.githubusercontent.com/gudinos106-ui/MoneyTrack-CR/refs/heads/main/logo.png",
+    layout="wide"
 )
 def configurar_pwa():
     manifest_url = "https://raw.githubusercontent.com/gudinos106-ui/MoneyTrack-CR/refs/heads/main/manifest.json?v=2"
