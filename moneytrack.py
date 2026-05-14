@@ -18,6 +18,21 @@ st.set_page_config(
     layout="wide", 
     initial_sidebar_state="expanded"
 )
+def configurar_pwa():
+    manifest_url = "https://raw.githubusercontent.com/gudinos106-ui/MoneyTrack-CR/refs/heads/main/manifest.json"
+    sw_url = "https://raw.githubusercontent.com/gudinos106-ui/MoneyTrack-CR/refs/heads/main/sw.js"
+    
+    pwa_html = f"""
+    <link rel="manifest" href="{manifest_url}">
+    <script>
+      if ('serviceWorker' in navigator) {{
+        navigator.serviceWorker.register('{sw_url}');
+      }}
+    </script>
+    """
+    st.components.v1.html(pwa_html, height=0)
+
+configurar_pwa()
 
 def generar_pdf_reporte(nombre, total, saldo, resumen_gastos, df_final):
     pdf = FPDF()
