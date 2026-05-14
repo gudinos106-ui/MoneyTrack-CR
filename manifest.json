@@ -1,0 +1,17 @@
+{
+  "short_name": "MoneyTrack Gold",
+  "name": "MoneyTrack: Estado de Cuenta Inteligente",
+  "description": "Analizador financiero inteligente para micro-entrepreneurs.",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1f77b4",
+  "background_color": "#000000"
+}
