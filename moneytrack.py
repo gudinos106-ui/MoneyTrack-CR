@@ -15,7 +15,7 @@ from utils import enviar_telegram, limpiar_monto, categorizar
 
 st.set_page_config(
     page_title="MoneyTrack Gold",
-    page_icon="https://raw.githubusercontent.com/gudinos106-ui/MoneyTrack-CR/refs/heads/main/Money_Gold.png",
+    page_icon="https://raw.githubusercontent.com/gudinos106-ui/MoneyTrack-CR/refs/heads/main/money.png",
     layout="wide"
 )
 def configurar_pwa():
