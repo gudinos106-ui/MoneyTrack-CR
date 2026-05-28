@@ -11,7 +11,9 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, Field, ValidationError
 # Importamos las herramientas
 from utils import enviar_telegram, limpiar_monto, categorizar
+from models import MovimientoBCR
 
+load_dotenv(dotenv_path=".env.py")
 
 st.set_page_config(
     page_title="MoneyTrack Gold",
